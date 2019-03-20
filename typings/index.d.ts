@@ -1,4 +1,4 @@
-declare module "react-intl-universal" {
+declare module "@newhippo/react-intl-universal" {
     /**
      * Helper: determine user's locale via URL, cookie, and browser's language.
      * You may not this API, if you have other rules to determine user's locale.
@@ -56,10 +56,10 @@ declare module "react-intl-universal" {
      * @param {Object} variables Variables in message
      * @returns {React.Element} message
      */
-    export function getHTML(key: string, value: any): string;
+    export function getHTML(key: string, value: any, locale: string): string;
 
     /**
-     * Get the inital options 
+     * Get the inital options
      * @returns {Object} options includes currentLocale and locales
      */
     export function getInitOptions(): ReactIntlUniversalOptions;
@@ -78,7 +78,7 @@ declare module "react-intl-universal" {
 
     /**
      * Load more locales after init
-     * @param {Object} locales App locale data 
+     * @param {Object} locales App locale data
      */
     export function load(locales: { [key: string]: any }): void;
 
@@ -92,7 +92,7 @@ declare module "react-intl-universal" {
         warningHandler?: (message?: any, error?: any) => void;
         escapeHtml?: boolean;
     }
-    
+
     export interface ReactIntlUniversalMessageDescriptor {
         id: string,
         defaultMessage?: string,
