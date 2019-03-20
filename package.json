@@ -1,5 +1,5 @@
 {
-  "name": "react-intl-universal",
+  "name": "@newhippo/react-intl-universal",
   "version": "1.15.6",
   "description": "Internationalize React apps. Not only for React.Component but also for Vanilla JS.",
   "keywords": [
