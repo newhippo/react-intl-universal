@@ -56,11 +56,13 @@ class ReactIntlUniversal {
    * Get the formatted message by key
    * @param {string} key The string representing key in locale data file
    * @param {Object} variables Variables in message
+   * @param {locale} optional override of currentLocale
    * @returns {string} message
    */
-  get(key, variables) {
+  get(key, variables, locale) {
     invariant(key, "key is required");
-    const { locales, currentLocale, formats } = this.options;
+    const { locales, formats } = this.options;
+    const currentLocale = locale || this.options.currentLocale;
 
     if (!locales || !locales[currentLocale]) {
       this.options.warningHandler(
