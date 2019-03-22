@@ -41,7 +41,7 @@ declare module "@newhippo/react-intl-universal" {
      * @param {Object} variables Variables in message
      * @returns {string} message
      */
-    export function get(key: string, value: any): string;
+    export function get(key: string, value: any, locale?: string): string;
 
     /**
      * Get the formatted html message by key.
@@ -56,7 +56,7 @@ declare module "@newhippo/react-intl-universal" {
      * @param {Object} variables Variables in message
      * @returns {React.Element} message
      */
-    export function getHTML(key: string, value: any, locale: string): string;
+    export function getHTML(key: string, value: any, locale?: string): string;
 
     /**
      * Get the inital options
